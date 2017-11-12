@@ -1,0 +1,6 @@
+usr/local/bin/onex-qt usr/bin
+share/pixmaps/onex32.xpm usr/share/pixmaps
+share/pixmaps/onex16.xpm usr/share/pixmaps
+share/pixmaps/onex128.png usr/share/pixmaps
+debian/onex-qt.desktop usr/share/applications
+debian/onex-qt.protocol usr/share/kde4/services/

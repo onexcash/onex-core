@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/onex_bg.qm</file>
+        <file alias="de">locale/onex_de.qm</file>
+        <file alias="en">locale/onex_en.qm</file>
+        <file alias="es">locale/onex_es.qm</file>
+        <file alias="fi">locale/onex_fi.qm</file>
+        <file alias="fr">locale/onex_fr.qm</file>
+        <file alias="it">locale/onex_it.qm</file>
+        <file alias="ja">locale/onex_ja.qm</file>
+        <file alias="pl">locale/onex_pl.qm</file>
+        <file alias="pt">locale/onex_pt.qm</file>
+        <file alias="ru">locale/onex_ru.qm</file>
+        <file alias="sk">locale/onex_sk.qm</file>
+        <file alias="sv">locale/onex_sv.qm</file>
+        <file alias="vi">locale/onex_vi.qm</file>
+        <file alias="zh_CN">locale/onex_zh_CN.qm</file>
+        <file alias="zh_TW">locale/onex_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,22 @@
+[Unit]
+Description=Onex's distributed currency daemon
+After=network.target
+
+[Service]
+User=onexcore
+Group=onexcore
+
+Type=forking
+PIDFile=/var/lib/onexd/onexd.pid
+ExecStart=/usr/bin/onexd -daemon -pid=/var/lib/onexd/onexd.pid \
+-conf=/etc/onexcore/onex.conf -datadir=/var/lib/onexd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

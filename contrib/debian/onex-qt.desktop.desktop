@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Onex
+Comment=Onex P2P Cryptocurrency
+Exec=onex-qt %u
+Terminal=false
+Type=Application
+Icon=onex128
+MimeType=x-scheme-handler/onex;
+Categories=Office;Finance;
+Name[en_US]=onex-qt.desktop

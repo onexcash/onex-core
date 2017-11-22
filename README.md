@@ -1,4 +1,4 @@
-Onex Cash Core staging tree 1.0.2
+Onex Cash Core staging tree 1.1.0
 ===============================
 
 ![onex logo](https://raw.githubusercontent.com/onexcash/onex-core/master/src/qt/res/images/light/onex_logo_horizontal.png)

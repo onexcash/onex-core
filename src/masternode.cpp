@@ -642,11 +642,12 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
 
     // make sure the vout that was signed is related to the transaction that spawned the Masternode
     //  - this is expensive, so it's only done once per Masternode
-    if(!darkSendSigner.IsVinAssociatedWithPubkey(vin, pubKeyCollateralAddress)) {
-        LogPrintf("CMasternodeMan::CheckOutpoint -- Got mismatched pubKeyCollateralAddress and vin\n");
-        nDos = 33;
-        return false;
-    }
+
+    //if(!darkSendSigner.IsVinAssociatedWithPubkey(vin, pubKeyCollateralAddress)) {
+    //    LogPrintf("CMasternodeMan::CheckOutpoint -- Got mismatched pubKeyCollateralAddress and vin\n");
+    //    nDos = 33;
+    //    return false;
+    //}
 
     // verify that sig time is legit in past
     // should be at least not earlier than block when 1000 ONEX tx got nMasternodeMinimumConfirmations

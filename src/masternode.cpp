@@ -600,6 +600,7 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
     // we are a masternode with the same vin (i.e. already activated) and this mnb is ours (matches our Masternode privkey)
     // so nothing to do here for us
     if(fMasterNode && vin.prevout == activeMasternode.vin.prevout && pubKeyMasternode == activeMasternode.pubKeyMasternode) {
+        LogPrintf("CMasternodeBroadcast::CheckOutpoint -- pubKeyMasternode() failed, masternode=%s\n", vin.prevout.ToStringShort());
         return false;
     }
 
@@ -624,8 +625,8 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
             LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Failed to find Masternode UTXO, masternode=%s\n", vin.prevout.ToStringShort());
             return false;
         }
-        if(coins.vout[vin.prevout.n].nValue != 10000 * COIN) {
-            LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Masternode UTXO should have 10000 ONEX, masternode=%s\n", vin.prevout.ToStringShort());
+        if(coins.vout[vin.prevout.n].nValue != 5000 * COIN) {
+            LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Masternode UTXO should have 5000 ONEX, masternode=%s\n", vin.prevout.ToStringShort());
             return false;
         }
         if(chainActive.Height() - coins.nHeight + 1 < Params().GetConsensus().nMasternodeMinimumConfirmations) {
@@ -665,7 +666,7 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
             }
         }
     }
-
+    LogPrintf("CMasternodeMan::CheckOutpoint -- Ok\n");
     return true;
 }
 
